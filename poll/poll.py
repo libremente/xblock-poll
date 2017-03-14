@@ -249,6 +249,7 @@ class PollBlock(PollBase):
             # The SDK doesn't set url_name.
             'url_name': getattr(self, 'url_name', ''),
             "display_name": self.display_name,
+            "i18n_service" : self.runtime.service(self, "i18n"),
         })
 
         if self.choice:
@@ -269,7 +270,8 @@ class PollBlock(PollBase):
             'display_name': self.display_name,
             'private_results': self.private_results,
             'feedback': self.feedback,
-            'js_template': js_template
+            'js_template': js_template,
+            "i18n_service" : self.runtime.service(self, "i18n"),
         })
         return self.create_fragment(
             context, "public/html/poll_edit.html",

@@ -1,27 +1,28 @@
+{% load xblock_i18n %}
 {{js_template|safe}}
 <div class="wrapper-comp-settings is-active editor-with-buttons" id="settings-tab">
     <form id="poll-form">
     <ul class="list-input settings-list" id="poll-line-items">
         <li class="field comp-setting-entry is-set">
             <div class="wrapper-comp-setting">
-                <label class="label setting-label poll-setting-label" for="display_name">Display Name</label>
+                <label class="label setting-label poll-setting-label" for="display_name">{% trans "Display Name" %}</label>
                 <!-- In the case of surveys, this field will actually be used for block_name. -->
                 <input class="input setting-input" name="display_name" id="poll-display-name" value="{{ display_name }}" type="text" />
             </div>
         </li>
         {% if not multiquestion %}
             <li class="field comp-setting-entry is-set">
-              <h2><label for="poll-question-editor">Question/Prompt</label></h2>
-              <a href="//daringfireball.net/projects/markdown/syntax" target="_blank">Markdown Syntax</a> is supported.
+                <h2><label for="poll-question-editor"> {% trans "Question/Prompt" %} </label></h2>
+                <a href="//daringfireball.net/projects/markdown/syntax" target="_blank">{% trans "Markdown Syntax " %}</a>{% trans "is supported." %}
               <div id="poll-question-editor-container">
                 <textarea class="input setting-input" name="question" id="poll-question-editor">{{question}}</textarea>
               </div>
-              <span class="tip setting-help">Enter the prompt for the user.</span>
+              <span class="tip setting-help">{% trans "Enter the prompt for the user." %}</span>
             </li>
         {% endif %}
         <li class="field comp-setting-entry is-set">
-           <h2><label for="poll-feedback-editor">Feedback</label></h2>
-           <a href="//daringfireball.net/projects/markdown/syntax" target="_blank">Markdown Syntax</a> is supported.
+            <h2><label for="poll-feedback-editor">{% trans "Feedback" %}</label></h2>
+            <a href="//daringfireball.net/projects/markdown/syntax" target="_blank">{% trans "Markdown Syntax " %}</a> is supported.
            <div id="poll-feedback-editor-container">
              <textarea class="input setting-input" name="feedback" id="poll-feedback-editor">{{feedback}}</textarea>
            </div>
