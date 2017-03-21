@@ -1,3 +1,4 @@
+{% load i18n %}
 {{ js_template|safe }}
 <div class="poll-block" data-private="{% if private_results %}1{% endif %}">
 {# If no form is present, the Javascript will load the results instead. #}
@@ -24,13 +25,22 @@
           </li>
       {% endfor %}
       </ul>
-      <input class="input-main" type="button" name="poll-submit" value="{% if choice %}Resubmit{% else %}Submit{% endif %}" disabled />
+      <input class="input-main" type="button" name="poll-submit" value="{% if choice %}Resubmit{% else %}{% trans "Submit" %}{% endif %}" disabled />
   </form>
-      <div class="poll-voting-thanks{% if not choice %} poll-hidden{% endif %}"><span>Thank you for your submission!</span></div>
+  <div>
+      <p>Below this point, if the translation system works, you should see: `THIS TEXT HAS BEEN TRANSLATED` 4 times and <b>NOT</b> `TRANSLATE ME` <p>
+      <p>--------------------------</p>
+      <p>{% trans "TRANSLATE ME" %}</p>
+      <p>{% trans "TRANSLATE ME" %}</p>
+      <p>{% trans "TRANSLATE ME" %}</p>
+      <p>{% trans "TRANSLATE ME" %}</p>
+      <p>--------------------------</p>
+  </div>
+  <div class="poll-voting-thanks{% if not choice %} poll-hidden{% endif %}"><span>{% trans "Thank you for your submission!" %}</span></div>
       {% if feedback %}
       <div class="poll-feedback-container{% if not choice %} poll-hidden{% endif %}">
           <hr />
-          <h3 class="poll-header">Feedback</h3>
+          <h3 class="poll-header">{% trans "Feedback" %}</h3>
           <div class="poll-feedback">
               {{feedback|safe}}
           </div>

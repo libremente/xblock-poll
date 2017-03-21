@@ -129,7 +129,7 @@ class PollBase(XBlock, ResourceMixin, PublishEventMixin):
 
         return items
 
-
+@XBlock.needs('i18n')
 class PollBlock(PollBase):
     """
     Poll XBlock. Allows a teacher to poll users, and presents the results so
@@ -381,7 +381,6 @@ class PollBlock(PollBase):
                  feedback="### Thank you&#10;&#10;for being a valued student."/>
              """),
         ]
-
 
 class SurveyBlock(PollBase):
     display_name = String(default='Survey')

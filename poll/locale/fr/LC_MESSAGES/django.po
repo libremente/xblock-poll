@@ -16,23 +16,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
 
-#: poll/public/html/poll_edit.html 
-msgid "Question/Prompt"
-msgstr "RANDOM"
+#: poll/poll.py
+msgid "Submit"
+msgstr "THIS TEXT HAS BEEN TRANSLATED"
 
 #: poll/public/html/poll_edit.html 
+msgid "Question/Prompt"
+msgstr "THIS TEXT HAS BEEN TRANSLATED"
+
+#: poll/public/html/poll.html 
 msgid "Feedback"
-msgstr "RANDOM"
+msgstr "THIS TEXT HAS BEEN TRANSLATEDello"
 
 #: poll/public/html/poll_edit.html 
 msgid "Markdown Syntax "
-msgstr "RANDOM"
+msgstr "THIS TEXT HAS BEEN TRANSLATED"
 
 #: poll/public/html/poll_edit.html 
 msgid "is supported."
-msgstr "RANDOM"
+msgstr "THIS TEXT HAS BEEN TRANSLATED"
 
 #: poll/public/html/poll_edit.html 
 msgid "Enter the prompt for the user."
-msgstr "RANDOM"
+msgstr "THIS TEXT HAS BEEN TRANSLATED"
+
+#: poll/public/html/poll.html 
+msgid "TRANSLATE ME"
+msgstr "THIS TEXT HAS BEEN TRANSLATED"
 
