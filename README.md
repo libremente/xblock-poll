@@ -19,3 +19,10 @@
 
 * Added the locale folder containing the `.po`. and `.mo` files for
   translation.
+
+## Warning
+This implementation does not follow the standard i18n guidelines for Xblocks
+which need to have a `translation` folder near the main `<xblock_name.py>` file
+and inside the `<lang_code>/LC_MESSAGES` the `text.po` and `text.mo`. This one
+has a `locale` folder and the couple `django.po` and `django.mo` file since we
+are testing another translation solution. 
